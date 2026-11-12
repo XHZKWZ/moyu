@@ -361,11 +361,13 @@
 })();
 </script>
 <!-- ============================================================
-     ★ 发新版只改下面这个块 ★（App 检查更新也读它，主页版本卡也渲染它）
-     改完把整个 index.html 上传到 EdgeOne 替换，即完成发布。
+     ★ 发新版只改下面这两个块 ★（App 检查更新也读它们，主页版本卡也渲染版本块）
+     改完把整个 index.html 上传到 GitHub Pages 替换，即完成发布。
      字段：versionCode=上一版+1；versionName=三段号；apkUrl=蓝奏云分享页链接
           （App 会自动解析出真实下载地址，带密码时把提取码填进 apkPwd）；
-          changelog=更新说明；sha256/fileSize 可留空（留空则跳过校验）。
+          changelog=更新说明；sha256/fileSize 为必填校验值（缺 sha256 App 会拒装）。
+     签名：release-data 块改完后必须重算签名并同步更新 release-signature 块，
+          否则 App 端验签失败会当作「没有更新」拒收（流程见 发布流程.md ③）。
      ============================================================ -->
 <script id="release-data" type="application/json">
 {
@@ -379,6 +381,12 @@
   "minSupportCode": 30,
   "publishedAt": "2026-11-11"
 }
+</script>
+<!-- 版本块签名（ECDSA P-256 / SHA256withECDSA）：对上面 release-data 块内 trim 后的
+     原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见 docs/_tools/sign_release_block.py，
+     流程见 发布流程.md 第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
+<script id="release-signature" type="application/json">
+{"sha256WithEcdsa":"MEQCIFAgFFNZIhlMZCow9vEL1/cmFEI/C70aduawyk+7LNSzAiBdWnRG4BM2EeU18bgTYFq0Wm1XBj79Zy2NusgD7AY1tw=="}
 </script>
 </body>
 </html>
