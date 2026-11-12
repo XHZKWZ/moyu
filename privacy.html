@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>墨屿 · 隐私政策</title>
+<style>
+  :root {
+    --bg: #0b0e14; --card: rgba(255,255,255,.05); --border: rgba(255,255,255,.09);
+    --text: #eef1f6; --muted: #8b93a3; --accent: #e8b34b;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f7f5f0; --card: rgba(255,255,255,.75); --border: rgba(30,30,40,.09);
+            --text: #1d2129; --muted: #6b7280; --accent: #b8860b; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.9;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 64px; }
+  h1 { font-size: 26px; letter-spacing: 3px; margin-bottom: 6px; }
+  .date { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+  h2 { font-size: 17px; margin: 24px 0 8px; color: var(--accent); }
+  p, li { font-size: 14.5px; color: var(--text); }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px; margin-top: 8px;
+  }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>墨屿 · 隐私政策</h1>
+  <p class="date">更新日期：2026-11-11</p>
+
+  <div class="card">
+    <p>墨屿（以下简称「本应用」）是一款本地阅读器。<strong>本应用不设服务器、不注册账号也能使用、不内置任何广告与统计 SDK。</strong>以下说明你在使用本应用时数据如何被处理。</p>
+  </div>
+
+  <h2>一、我们收集什么</h2>
+  <div class="card">
+    <ul>
+      <li><strong>本应用不收集、不上传任何个人信息。</strong>书架、阅读进度、书签、笔记、档案资料等全部仅保存在你的设备本地。</li>
+      <li>仅当你主动配置 <strong>WebDAV 备份</strong>时，书源与进度才会经加密连接传输到<strong>你自己指定的网盘服务器</strong>；该服务器的地址与凭据由你填写，本应用开发者无法读取。</li>
+      <li>仅当你主动添加<strong>书源 / RSS 订阅</strong>时，本应用才会按你输入的网址访问第三方网站获取内容，请求中不附带你的身份信息。</li>
+    </ul>
+  </div>
+
+  <h2>二、权限用途</h2>
+  <div class="card">
+    <ul>
+      <li><strong>网络（INTERNET）</strong>：书源抓取、RSS、检查更新。</li>
+      <li><strong>安装未知应用（REQUEST_INSTALL_PACKAGES）</strong>：仅在你手动点「立即安装」时调起系统安装器完成应用自更新，不做任何静默安装。</li>
+      <li><strong>通知 / 前台服务</strong>：听书播放控制、批量校验进度展示。</li>
+      <li>本应用不申请定位、通讯录、短信、通话记录等敏感权限。</li>
+    </ul>
+  </div>
+
+  <h2>三、数据删除</h2>
+  <div class="card">
+    <p>卸载应用即彻底删除所有本地数据；「我的 → 清除」提供书源账号密码等分类清理入口，无需联系任何人。</p>
+  </div>
+
+  <h2>四、未成年人</h2>
+  <div class="card">
+    <p>本应用面向一般读者，不主动向未成年人收集任何信息（技术上也不收集）。</p>
+  </div>
+
+  <h2>五、政策更新</h2>
+  <div class="card">
+    <p>本政策如有变更，会在本页面更新并随应用版本说明。若你在变更后继续使用本应用，视为接受更新后的政策。</p>
+  </div>
+
+  <p style="margin-top:32px;text-align:center;"><a href="index.html">← 返回主页</a></p>
+</div>
+</body>
+</html>
