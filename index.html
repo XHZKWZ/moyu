@@ -140,6 +140,28 @@
   .f-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
   .f-card p { font-size: 13px; color: var(--muted); }
 
+  /* ---- 海报与解锁码 ---- */
+  .poster-shot { display: flex; justify-content: center; margin-top: 26px; }
+  .poster-shot img {
+    width: 100%; max-width: 460px; height: auto; border-radius: 16px;
+    border: 1px solid var(--card-border); box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  }
+
+  /* ---- 关于书源 / 使用声明 ---- */
+  .source-note {
+    max-width: 760px; margin: 0 auto; padding: 24px 26px; font-size: 13.5px;
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 16px; color: var(--muted);
+  }
+  .source-note p { margin-bottom: 10px; }
+  .source-note ul { margin: 4px 0 12px; padding-left: 20px; }
+  .source-note li { margin-bottom: 5px; }
+  .source-note .disclaimer {
+    margin: 16px 0 0; padding-top: 14px; font-size: 12.5px;
+    border-top: 1px solid var(--card-border);
+  }
+  .foot-note { display: inline-block; margin-top: 6px; opacity: .8; }
+
   /* ---- 手机 mockup 展示 ---- */
   .showcase { padding: 48px 0 8px; }
   .shot {
@@ -170,6 +192,7 @@
       <p class="tagline fade-in d2">书源生态 × 灵宠商店 × 听书漫画<br><b>一座只属于你的阅读小岛</b></p>
       <div class="hero-cta fade-in d3">
         <a class="cta cta-main" id="ctaDownload" href="#download">⬇ 下载应用</a>
+        <a class="cta cta-ghost" href="#license">前 200 名免费领码</a>
         <a class="cta cta-ghost" href="#features">了解特性</a>
       </div>
     </div>
@@ -226,6 +249,21 @@
     </div>
   </section>
 
+  <!-- ============ 解锁码与版本 ============ -->
+  <section class="features" id="license">
+    <h2 class="section-title">解锁码与版本</h2>
+    <p class="section-sub">一次买断 · 永久免费 · 数据归你</p>
+    <div class="poster-shot fade-in">
+      <img src="poster.png" alt="墨屿宣传海报：普通版与 Pro 版对比">
+    </div>
+    <div class="source-note" style="margin-top: 26px;">
+      <p><b>普通版：</b>需解锁码激活，首发限量 <b>前 200 名免费领取</b>，之后 ¥25。一次领码永久有效，解锁全部基础阅读能力（多源搜索、手动换源、书源管理、手动备份、听书、漫画、音乐等）。</p>
+      <p><b>Pro 版：</b>¥48 首发（常规 ¥68），一次买断、永久免费，含普通版全部能力与私密书架，另解锁数据安全（含每日本地自动备份）、阅读体验、深度报告、书库管理四件效率工具。授权绑定用户 ID，换机可迁移；授权失效只关 Pro 增强能力，不删数据、不影响已下载内容。无订阅、无自动续费。</p>
+      <p><b>墨晶商店：</b>阅读时长免费铸造墨晶（读 60 分钟约铸 65 墨晶），可兑换头像框、称号、灵宠外观、盲盒等装饰好物；也可自愿充值：¥6=600 / ¥30=3280 / ¥68=7880 / ¥128=15880 墨晶。墨晶与充值均只用于装饰兑换，不涉及任何阅读功能与内容，未成年人请勿充值。</p>
+      <p>解锁码通过 <b>QQ 1563475968</b>（与页底「联系作者」一致）领取或购买。</p>
+    </div>
+  </section>
+
   <!-- ============ 数据条带 ============ -->
   <section class="stats">
     <div class="stat"><b>0</b><span>广告 · 零内嵌</span></div>
@@ -263,6 +301,24 @@
         <div class="f-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></svg></div>
         <h3>皮肤与徽章</h3><p>主题皮肤随季换装，成就徽章墙记录阅读足迹。</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ 关于书源（发布前合规告知） ============ -->
+  <section class="features" id="sources">
+    <h2 class="section-title">关于书源</h2>
+    <p class="section-sub">使用前请花一分钟读完</p>
+    <div class="source-note">
+      <p>墨屿是一款阅读工具，安装包内不含任何书源，也不预置任何内容站点。</p>
+      <p>请自行准备你有权使用的书源规则（.json）或订阅地址，然后在 App 内导入：</p>
+      <ul>
+        <li>书架 → 空态「导入书源文件」：本地 JSON / ZIP / TXT</li>
+        <li>书源管理 → 「添加书源」：订阅地址或本地文件</li>
+        <li>书源管理 → 「更新源」：可选引导，可随时取消</li>
+      </ul>
+      <p>合法的源可以是你自己编写的规则、公有领域文本站点、已获授权的内容源或自建 RSS。请勿导入侵犯他人著作权或含有违法内容的源。书源由你自行维护，其合法性由你自行判断。</p>
+      <p><b>内容与合规：</b>本应用不提供、不预置、不推荐任何内容站点，也不对第三方内容作任何担保；请自行判断所导入内容的合法性并遵守所在地法律法规，未成年人请勿使用。应用内的内容分级处理完全在您的设备本地完成，不联网核销、不上传您的用户 ID。</p>
+      <p class="disclaimer"><b>声明：</b>本页与软件仅说明使用方式，不提供、不推荐、不链接任何第三方书源或内容站点；页面文字不构成对任何第三方内容的授权或担保。墨屿为个人开发的阅读工具，软件内部分功能与虚拟物品可能由作者以收费、订阅或赞助回馈方式提供，具体以软件内公示为准；请支持正版。您通过软件访问的内容，其著作权及其他权利归原权利人所有，合法性由您自行判断并承担相应责任。若您是相关权利人，认为内容侵犯了您的合法权益，可通过页面底部或软件「联系作者」中的方式通知，核实后将删除相关规则或停止提供访问。</p>
     </div>
   </section>
 
@@ -328,8 +384,10 @@
   </section>
 
   <footer>
-    <a href="privacy.html">隐私政策</a>·<a href="update-manifest.json">版本清单</a>
-    <br>© 2026 墨屿 Moyu Reader · 本站由 EdgeOne Pages 托管
+    <a href="#sources">关于书源</a>·<a href="#license">版本与解锁码</a>·<a href="privacy.html">隐私政策</a>
+    <br>© 2026 墨屿 Moyu Reader · 本站托管于 GitHub Pages
+    <br><span class="foot-note">本站仅提供软件下载与使用说明，不提供、不推荐、不链接任何第三方书源或内容站点。</span>
+    <br><span class="foot-note">权利人或用户需联系作者：QQ 1563475968（与软件「联系作者」一致）。</span>
   </footer>
 </div>
 
@@ -367,26 +425,26 @@
           （App 会自动解析出真实下载地址，带密码时把提取码填进 apkPwd）；
           changelog=更新说明；sha256/fileSize 为必填校验值（缺 sha256 App 会拒装）。
      签名：release-data 块改完后必须重算签名并同步更新 release-signature 块，
-          否则 App 端验签失败会当作「没有更新」拒收（流程见 发布流程.md ③）。
+          否则 App 端验签失败会当作「没有更新」拒收（流程见内部发版说明 ③）。
      ============================================================ -->
 <script id="release-data" type="application/json">
 {
-  "versionCode": 51,
-  "versionName": "0.5.2",
-  "apkUrl": "https://moyuapp.lanzout.com/iWk584fwxqab",
-  "apkPwd": "d1ru",
-  "sha256": "62eafaadcad3b44b9b5a0a9dd13a9d4061195ee656d594cf0528e9a6d6163b9d",
-  "fileSize": 49518921,
-  "changelog": "书架搜索与单本统计、私密书架分小说/漫画两档、应用内自更新、渲染进程隔离（大书不再闪退）、11-13 全项目审计健壮性修复",
+  "versionCode": 52,
+  "versionName": "0.5.3",
+  "apkUrl": "https://moyuapp.lanzout.com/i07yt4g2od8d",
+  "apkPwd": "accs",
+  "sha256": "e1f405d3b7a9dd2a78b755fbf9dcff0e14b03cdaa9105b3a3d81c76fbd0f7e48",
+  "fileSize": 52598608,
+  "changelog": "阅读尺与按书字体方案、九宫格/手势自定义、折叠屏适配、Pro 授权与换机迁移、统一导入（Legado/第三方书架）、WebDAV 多版本备份与年报导出、自更新链路加固",
   "minSupportCode": 30,
-  "publishedAt": "2026-11-14"
+  "publishedAt": "2026-11-15"
 }
 </script>
 <!-- 版本块签名（ECDSA P-256 / SHA256withECDSA）：对上面 release-data 块内 trim 后的
-     原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见 docs/_tools/sign_release_block.py，
-     流程见 发布流程.md 第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
+     原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见本地发版工具，
+     流程见内部发版说明第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
 <script id="release-signature" type="application/json">
-{"sha256WithEcdsa":"MEQCIEJt98uudkeHjHLVbkbGpQWBsV8w+iioA3E1KmAg2aX+AiBGeN8F6syJjRsZCNpgrm7T7ffP/QUZN4GyidpShfEyPA=="}
+{"sha256WithEcdsa":"MEUCIQDUwMpxThehY7Tp4CTJJidJIK/BTBWtUq2Ddr1L0sCwMgIgDg/ws2RaeH7gRHHmhXwwQ2SSiaCUwDog5NkdT15OqbQ="}
 </script>
 </body>
 </html>

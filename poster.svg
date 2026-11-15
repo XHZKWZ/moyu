@@ -1,0 +1,97 @@
+<svg viewBox="0 0 680 1580" width="680" height="1580" role="img" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="680" height="1580" fill="#1B1814"/>
+  <circle cx="600" cy="90" r="150" fill="#242019"/>
+  <circle cx="40" cy="1440" r="120" fill="#221E17"/>
+  <rect x="48" y="196" width="584" height="2" fill="#3A342A"/>
+  <text x="48" y="118" font-family="KaiTi, STKaiti, serif" font-size="72" font-weight="700" fill="#F2EDE3">墨屿</text>
+  <text x="220" y="106" font-family="Microsoft YaHei, sans-serif" font-size="16" fill="#C9A227" letter-spacing="4">MOYU READER</text>
+  <text x="220" y="132" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#9A927F">本地书源 · 隐私优先 · 无广告</text>
+  <text x="48" y="172" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#D8D2C4">一次领码，永久阅读 —— 你的书房你做主</text>
+  <rect x="48" y="228" width="584" height="242" rx="12" fill="#242019"/>
+  <text x="76" y="266" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="500" fill="#D8D2C4">普通版 · 前 200 名免费领码</text>
+  <text x="76" y="290" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">解锁码激活，一次领码永久有效</text>
+  <rect x="76" y="306" width="96" height="32" rx="16" fill="#302B21"/>
+  <text x="124" y="327" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">翻页阅读</text>
+  <rect x="182" y="306" width="66" height="32" rx="16" fill="#302B21"/>
+  <text x="215" y="327" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">目录</text>
+  <rect x="258" y="306" width="66" height="32" rx="16" fill="#302B21"/>
+  <text x="291" y="327" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">书签</text>
+  <rect x="334" y="306" width="66" height="32" rx="16" fill="#302B21"/>
+  <text x="367" y="327" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">进度</text>
+  <rect x="410" y="306" width="96" height="32" rx="16" fill="#302B21"/>
+  <text x="458" y="327" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">自动翻页</text>
+  <rect x="76" y="348" width="88" height="32" rx="16" fill="#302B21"/>
+  <text x="120" y="369" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">多源搜索</text>
+  <rect x="174" y="348" width="88" height="32" rx="16" fill="#302B21"/>
+  <text x="218" y="369" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">手动换源</text>
+  <rect x="272" y="348" width="88" height="32" rx="16" fill="#302B21"/>
+  <text x="316" y="369" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">书源管理</text>
+  <rect x="370" y="348" width="76" height="32" rx="16" fill="#302B21"/>
+  <text x="408" y="369" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">订阅源</text>
+  <rect x="76" y="390" width="88" height="32" rx="16" fill="#302B21"/>
+  <text x="120" y="411" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">明文备份</text>
+  <rect x="174" y="390" width="88" height="32" rx="16" fill="#302B21"/>
+  <text x="218" y="411" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">WiFi 传书</text>
+  <rect x="272" y="390" width="60" height="32" rx="16" fill="#302B21"/>
+  <text x="302" y="411" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">漫画</text>
+  <rect x="342" y="390" width="60" height="32" rx="16" fill="#302B21"/>
+  <text x="372" y="411" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">音乐</text>
+  <text x="76" y="452" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#8B8371">领码后解锁全部基础能力 · 不卖内容、不卖书源</text>
+  <rect x="48" y="500" width="584" height="560" rx="12" fill="#2A2416" stroke="#C9A227" stroke-width="1.5"/>
+  <text x="76" y="542" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="500" fill="#E8C55F">Pro 版 · 效率工具四件套</text>
+  <rect x="76" y="566" width="44" height="24" rx="6" fill="#C9A227"/>
+  <text x="98" y="583" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="500" fill="#1B1814" text-anchor="middle">P1</text>
+  <text x="132" y="584" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="500" fill="#F2EDE3">数据安全 Pro</text>
+  <text x="132" y="610" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#A89F8A">口令加密备份 · 本地自动备份 · WebDAV 多版本快照</text>
+  <text x="132" y="636" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9A227">每天自动备份不用管 · 加密不泄密 · 坏了换一份快照恢复</text>
+  <rect x="76" y="666" width="44" height="24" rx="6" fill="#C9A227"/>
+  <text x="98" y="683" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="500" fill="#1B1814" text-anchor="middle">P2</text>
+  <text x="132" y="684" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="500" fill="#F2EDE3">阅读体验 Pro</text>
+  <text x="132" y="710" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#A89F8A">九宫格自定义点击 · 手势映射 · 阅读尺 · 按书字体方案</text>
+  <text x="132" y="736" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9A227">亮度、翻页、音量全在一手范围，不用每次划进菜单</text>
+  <rect x="76" y="766" width="44" height="24" rx="6" fill="#C9A227"/>
+  <text x="98" y="783" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="500" fill="#1B1814" text-anchor="middle">P3</text>
+  <text x="132" y="784" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="500" fill="#F2EDE3">深度报告 Pro</text>
+  <text x="132" y="810" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#A89F8A">Top 书籍与作者 · 来源分布 · 目标历史 · CSV 导出 · 长图</text>
+  <text x="132" y="836" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9A227">一年读了多少书、最爱哪位作者，一张长图晒出来</text>
+  <rect x="76" y="866" width="44" height="24" rx="6" fill="#C9A227"/>
+  <text x="98" y="883" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="500" fill="#1B1814" text-anchor="middle">P4</text>
+  <text x="132" y="884" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="500" fill="#F2EDE3">书库管理 Pro</text>
+  <text x="132" y="910" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#A89F8A">智能书架 · 重复书检测 · 批量元数据 · 私密书架</text>
+  <text x="132" y="936" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9A227">几百本书自动归整去重，私密的书只进带锁的书架</text>
+  <rect x="76" y="968" width="524" height="1" fill="#4A4128"/>
+  <text x="76" y="998" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#8B8371">Pro 含普通版全部能力与私密书架 · 授权绑定用户 ID · 换机可迁移</text>
+  <text x="76" y="1024" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#8B8371">Pro 数据永远可解密导出 · 授权失效不删数据</text>
+  <rect x="344" y="1096" width="1" height="90" fill="#3A342A"/>
+  <text x="48" y="1120" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#9A927F">普通版</text>
+  <text x="48" y="1170" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="500" fill="#D8D2C4">¥25</text>
+  <text x="48" y="1194" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">前 200 名免费领码</text>
+  <text x="372" y="1120" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#E8C55F">Pro 版</text>
+  <text x="372" y="1170" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="500" fill="#E8C55F">¥48<tspan font-size="17" fill="#D8D2C4"> 首发</tspan><tspan font-size="15" fill="#8B8371"> · 常规 ¥68</tspan></text>
+  <text x="372" y="1194" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">一次买断 · 永久免费</text>
+  <rect x="48" y="1218" width="584" height="1" fill="#3A342A"/>
+  <rect x="48" y="1244" width="584" height="246" rx="12" fill="#242019"/>
+  <text x="76" y="1282" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="500" fill="#E8C55F">墨晶商店 · 阅读即铸造</text>
+  <text x="76" y="1308" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">读 60 分钟约铸 65 墨晶 · 免费铸造，只换装饰、不换功能</text>
+  <rect x="76" y="1328" width="72" height="32" rx="16" fill="#302B21"/>
+  <text x="112" y="1349" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">头像框</text>
+  <rect x="158" y="1328" width="58" height="32" rx="16" fill="#302B21"/>
+  <text x="187" y="1349" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">称号</text>
+  <rect x="226" y="1328" width="86" height="32" rx="16" fill="#302B21"/>
+  <text x="269" y="1349" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">灵宠外观</text>
+  <rect x="322" y="1328" width="58" height="32" rx="16" fill="#302B21"/>
+  <text x="351" y="1349" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#B8B1A0" text-anchor="middle">盲盒</text>
+  <text x="396" y="1349" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">等多种好物</text>
+  <rect x="76" y="1384" width="96" height="32" rx="16" fill="#3A3220" stroke="#C9A227" stroke-width="0.5"/>
+  <text x="124" y="1405" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#E8C55F" text-anchor="middle">¥6 = 600</text>
+  <rect x="182" y="1384" width="112" height="32" rx="16" fill="#3A3220" stroke="#C9A227" stroke-width="0.5"/>
+  <text x="238" y="1405" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#E8C55F" text-anchor="middle">¥30 = 3280</text>
+  <rect x="304" y="1384" width="112" height="32" rx="16" fill="#3A3220" stroke="#C9A227" stroke-width="0.5"/>
+  <text x="360" y="1405" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#E8C55F" text-anchor="middle">¥68 = 7880</text>
+  <rect x="426" y="1384" width="128" height="32" rx="16" fill="#3A3220" stroke="#C9A227" stroke-width="0.5"/>
+  <text x="490" y="1405" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#E8C55F" text-anchor="middle">¥128 = 15880</text>
+  <text x="76" y="1452" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#8B8371">充值档位（墨晶）· 充值自愿 · 不涉及任何阅读功能与内容</text>
+  <rect x="48" y="1516" width="584" height="1" fill="#3A342A"/>
+  <text x="48" y="1556" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#6E6759">不内置任何书源 · 仅供个人学习研究 · 请支持正版</text>
+  <text x="632" y="1556" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#6E6759" text-anchor="end">墨屿 · Moyu Reader</text>
+</svg>
