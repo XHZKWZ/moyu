@@ -70,18 +70,6 @@
   .hero-cta { display: flex; align-items: center; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .cta-mini { color: var(--muted); font-size: 13px; text-decoration: none; padding: 8px 4px; }
   .cta-mini:hover { color: var(--accent); }
-  .src-banner {
-    margin-top: 22px; padding: 14px 16px; text-align: left; max-width: 520px;
-    background: linear-gradient(135deg, rgba(212,160,44,.14), rgba(47,111,237,.05));
-    border: 1px solid var(--card-border); border-left: 4px solid var(--accent);
-    border-radius: 14px;
-  }
-  @media (max-width: 760px) { .src-banner { margin-left: auto; margin-right: auto; } }
-  .sb-head { font-size: 15.5px; font-weight: 700; letter-spacing: .5px; }
-  .sb-head b { color: var(--accent); }
-  .sb-desc { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.7; }
-  .sb-desc b { color: var(--text); }
-  .sb-desc code { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: var(--accent); }
   @media (max-width: 760px) { .hero-cta { justify-content: center; } }
   .cta {
     padding: 13px 26px; border-radius: 12px; font-size: 15px; font-weight: 700;
@@ -318,19 +306,11 @@
     <div class="hero-text">
       <div class="logo-badge fade-in">✦ MOYU READER</div>
       <h1 class="title fade-in d1">墨　屿</h1>
-      <p class="tagline fade-in d2">书源生态 × 灵宠商店 × 听书漫画<br><b>一座只属于你的阅读小岛</b></p>
+      <p class="tagline fade-in d2">本地优先 · 排版讲究的离线阅读器<br><b>一座只属于你的阅读小岛</b></p>
       <div class="hero-cta fade-in d3">
         <a class="cta cta-main" id="ctaDownload" href="#download">⬇ 下载应用</a>
         <a class="cta cta-ghost" href="#license">前 200 名免费领码</a>
         <a class="cta-mini" href="#features">了解特性 →</a>
-      </div>
-      <div class="src-banner fade-in d3">
-        <div class="sb-head">📡 兼容 <b>Legado / 阅读系</b> 书源订阅地址</div>
-        <div class="sb-desc">
-          在「添加书源」里粘贴<b>书源订阅地址</b>（http(s) 直链或含 <code>src=</code> 的一键导入地址），
-          点「更新源」即可拉取 / 更新书源——与 Legado、阅读系 App 同格式，直接可用。
-          本软件<b>不预置、不推荐</b>任何第三方订阅地址，请使用你有权使用的。
-        </div>
       </div>
     </div>
 
@@ -549,7 +529,7 @@
       <p>请自行准备你有权使用的书源规则（.json）或订阅地址，然后在 App 内导入：</p>
       <ul>
         <li>书架 → 空态「导入书源文件」：本地 JSON / ZIP / TXT</li>
-        <li>书源管理 → 「添加书源」：订阅地址或本地文件</li>
+        <li>书源管理 → 「添加书源」：订阅地址或本地文件（订阅地址兼容 Legado / 阅读系 App 通用格式：http(s) 直链，或含 <code>src=</code> 的一键导入地址）</li>
         <li>书源管理 → 「更新源」：可选引导，可随时取消</li>
       </ul>
       <p>合法的源可以是你自己编写的规则、公有领域文本站点、已获授权的内容源或自建 RSS。请勿导入侵犯他人著作权或含有违法内容的源。书源由你自行维护，其合法性由你自行判断。</p>
