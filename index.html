@@ -319,7 +319,11 @@
         <a class="cta-mini" href="#features">了解特性 →</a>
       </div>
       <div class="ai-tip fade-in d3">
-        💡 书源相关 · 大模型很好用（<b>豆包电脑版</b> / <b>DeepSeek 网页版</b>）
+        <div>💡 书源相关 · 大模型很好用（<b>豆包电脑版</b> / <b>DeepSeek 网页版</b>）</div>
+        <div style="margin-top:10px;">
+          <button class="dl-copy" id="copyPrompt" type="button" aria-label="一键复制 Legado 书源规则生成提示词">📋 复制书源提示词</button>
+          <span class="dl-copy-ok" id="copyPromptOk" hidden>已复制 ✓</span>
+        </div>
       </div>
     </div>
 
@@ -360,6 +364,88 @@
       </svg>
     </div>
   </section>
+
+  <!-- 书源规则生成提示词（原始文本，按钮一键复制；含 <js> 等字符，必须放 script 原始文本块避免被当标签解析） -->
+  <script type="text/plain" id="legadoPrompt">你是 Legado 书源规则生成器。任务：根据我提供的页面样本，输出可直接导入的 bookSource JSON 数组。
+
+【输入样本】
+站点根地址：{{填 https://xxx.com}}
+样本1 搜索页（搜索词=%KEY%）：
+{{贴页面源码或接口响应，可截取相关片段}}
+样本2 详情页：
+{{...}}
+样本3 目录页：
+{{...}}
+样本4 正文页：
+{{...}}
+
+【硬约束，违反即视为失败】
+1. 只输出 JSON 数组，不要任何解释、不要 markdown 代码块以外的文字。
+2. 每个规则字段的选择器，必须能在上面样本里逐字找到对应标签或键名。找不到的一律留空字符串，并在 bookSourceComment 里写 "TODO:未取证:<字段名>"。
+3. 禁止编造 bookSourceUrl、禁止补 /search 之类你没在样本里见过的路径。搜索地址必须来自样本1 的实际 URL 形态，关键词位置写 {{key}}，页码写 {{page}}。
+4. 禁止使用 java.xxx() 扩展，禁止 @js: / <js>，除非我在样本里明确给了需要计算的证据。
+5. 拿不准优先级：留空 + TODO，绝不猜。
+
+【输出前自检，逐条核对后再输出】
+- searchUrl 含 {{key}}；若含页码则含 {{page}}
+- ruleSearch 的 bookList / name / bookUrl 三项均非空
+- ruleToc 的 chapterList / chapterName / chapterUrl 三项均非空
+- ruleContent 的 content 非空
+- 所有 URL 字段都是 http(s) 绝对地址或站内相对路径，不带未替换的占位符
+
+【字段骨架（缺项置空，不要删键）】
+{
+  "bookSourceName": "",
+  "bookSourceUrl": "",
+  "bookSourceGroup": "自建",
+  "bookSourceType": 0,
+  "bookSourceComment": "",
+  "enabled": false,
+  "enabledExplore": false,
+  "header": "",
+  "searchUrl": "",
+  "exploreUrl": "",
+  "ruleSearch": {"bookList":"","name":"","author":"","kind":"","lastChapter":"","updateTime":"","bookUrl":"","coverUrl":"","intro":""},
+  "ruleBookInfo": {"init":"","name":"","author":"","intro":"","kind":"","lastChapter":"","updateTime":"","coverUrl":"","tocUrl":"","wordCount":""},
+  "ruleToc": {"chapterPre":"","chapterList":"","chapterName":"","chapterUrl":"","formatJs":"","isVolume":"","isVip":"","updateTime":"","nextTocUrl":""},
+  "ruleContent": {"content":"","nextContentUrl":"","webJs":"","sourceRegex":"","replaceRegex":"","imageStyle":""}
+}
+
+【附：先给结论】
+在 JSON 之前先输出一行：CAN_WRITE=是/否 + 一句话理由。
+若站点是纯前端渲染、接口加密、需登录、图片扰码，输出 CAN_WRITE=否 和原因，不要硬编一条假源。</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('copyPrompt');
+      if (!btn) return;
+      var promptEl = document.getElementById('legadoPrompt');
+      btn.addEventListener('click', function () {
+        var t = promptEl ? promptEl.textContent.trim() : '';
+        var done = function () {
+          var ok = document.getElementById('copyPromptOk');
+          if (ok) {
+            ok.hidden = false;
+            setTimeout(function () { ok.hidden = true; }, 1600);
+          }
+        };
+        if (!t) return;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(t).then(done, done);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = t;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          done();
+        }
+      });
+    });
+  </script>
 
   <!-- ============ 版本卡 ============ -->
   <section id="download">
