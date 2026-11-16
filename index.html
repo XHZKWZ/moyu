@@ -70,6 +70,12 @@
   .hero-cta { display: flex; align-items: center; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
   .cta-mini { color: var(--muted); font-size: 13px; text-decoration: none; padding: 8px 4px; }
   .cta-mini:hover { color: var(--accent); }
+  .ai-tip {
+    margin-top: 18px; font-size: 13.5px; color: var(--muted); line-height: 1.75;
+    max-width: 540px;
+  }
+  .ai-tip b { color: var(--accent); font-weight: 700; }
+  @media (max-width: 760px) { .ai-tip { margin-left: auto; margin-right: auto; } }
   @media (max-width: 760px) { .hero-cta { justify-content: center; } }
   .cta {
     padding: 13px 26px; border-radius: 12px; font-size: 15px; font-weight: 700;
@@ -311,6 +317,10 @@
         <a class="cta cta-main" id="ctaDownload" href="#download">⬇ 下载应用</a>
         <a class="cta cta-ghost" href="#license">前 200 名免费领码</a>
         <a class="cta-mini" href="#features">了解特性 →</a>
+      </div>
+      <div class="ai-tip fade-in d3">
+        💡 书源不会写？交给大模型——把目标站点的结构描述给 <b>豆包电脑版</b> / <b>DeepSeek 网页版</b>，
+        让它帮你生成书源规则，比手写快得多，很好用。
       </div>
     </div>
 
