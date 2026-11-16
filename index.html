@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
     el('status').textContent = '页内版本信息块格式有误（JSON 不合法）';
     return;
   }
-  el('version').innerHTML = 'v' + m.versionName + '<small>versionCode ' + m.versionCode + '</small>';
+  el('version').innerHTML = 'v' + m.versionName;
   el('changelog').textContent = m.changelog || '';
   var size = Number(m.fileSize);
   el('meta').textContent =
