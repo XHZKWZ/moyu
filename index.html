@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>墨屿 Moyu Reader · 一座只属于你的阅读小岛</title>
-<meta name="description" content="墨屿是本地优先的开源阅读器：自定义书源、听书漫画、灵宠养成与备份同步。一次买断、永久免费、数据归你；安装包不含任何书源，请自行导入有权使用的规则。">
+<meta name="description" content="墨屿是本地优先的阅读器：自定义书源、听书漫画、灵宠养成与备份同步。一次买断、永久免费、数据归你；安装包不含任何书源，请自行导入有权使用的规则。">
 <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a201d" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xhzkwz.github.io/moyu/">
 <meta property="og:title" content="墨屿 Moyu Reader · 一座只属于你的阅读小岛">
-<meta property="og:description" content="开源阅读器：自定义书源 × 听书漫画 × 灵宠商店。一次买断 · 永久免费 · 数据归你。">
+<meta property="og:description" content="墨屿阅读器：自定义书源 × 听书漫画 × 灵宠商店。一次买断 · 永久免费 · 数据归你。">
 <meta property="og:image" content="https://xhzkwz.github.io/moyu/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://xhzkwz.github.io/moyu/og-cover.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MobileApplication","name":"墨屿 Moyu Reader","operatingSystem":"Android 10+","applicationCategory":"UtilitiesApplication","description":"本地优先的开源阅读器，自定义书源、听书漫画、灵宠养成与备份同步；一次买断、永久免费、数据归你。","url":"https://xhzkwz.github.io/moyu/","image":"https://xhzkwz.github.io/moyu/og-cover.png","softwareVersion":"0.5.4","downloadUrl":"https://moyuapp.lanzout.com/iVdOD4g7ag1a"}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"墨屿 Moyu Reader","operatingSystem":"Android 10+","applicationCategory":"UtilitiesApplication","description":"本地优先的阅读器，自定义书源、听书漫画、灵宠养成与备份同步；一次买断、永久免费、数据归你。","url":"https://xhzkwz.github.io/moyu/","image":"https://xhzkwz.github.io/moyu/og-cover.png","softwareVersion":"0.5.5","downloadUrl":"https://moyuapp.lanzout.com/iueAX4gb7hja"}
 </script>
 <style>
   :root {
@@ -71,6 +71,8 @@
   .cta-mini { color: var(--muted); font-size: 13px; text-decoration: none; padding: 8px 4px; }
   .cta-mini:hover { color: var(--accent); }
   @media (max-width: 760px) { .hero-cta { justify-content: center; } }
+  .scroll-hint { margin-top: 16px; color: var(--muted); font-size: 12.5px; letter-spacing: .5px; }
+  @media (max-width: 760px) { .scroll-hint { text-align: center; } }
   .cta {
     padding: 13px 26px; border-radius: 12px; font-size: 15px; font-weight: 700;
     text-decoration: none; cursor: pointer; border: 1px solid transparent;
@@ -100,10 +102,10 @@
     margin: 24px auto 0; max-width: 560px;
     background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
     padding: 24px 26px; backdrop-filter: blur(14px);
-    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    box-shadow: 0 20px 60px rgba(0,0,0,.25), 0 0 0 1px rgba(232,179,75,.28), 0 0 40px rgba(232,179,75,.12);
   }
   .ver-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-  .ver-num { font-size: 26px; font-weight: 800; }
+  .ver-num { font-size: 30px; font-weight: 800; }
   .ver-num small { color: var(--muted); font-weight: 400; font-size: 13px; margin-left: 8px; }
   .pill {
     font-size: 12px; padding: 3px 12px; border-radius: 999px;
@@ -173,21 +175,6 @@
   .f-icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   .f-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
   .f-card p { font-size: 13px; color: var(--muted); }
-
-  /* ---- 海报与解锁码 ---- */
-  .poster-shot { display: flex; justify-content: center; margin-top: 26px; }
-  .poster-link {
-    position: relative; display: block; width: 100%; max-width: 420px; height: 520px;
-    overflow: hidden; border-radius: 16px; text-decoration: none;
-    border: 1px solid var(--card-border); box-shadow: 0 20px 60px rgba(0,0,0,.25);
-  }
-  .poster-link img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .poster-more {
-    position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 12px 14px;
-    text-align: center; font-size: 12.5px; color: var(--text);
-    background: linear-gradient(transparent, var(--bg2));
-  }
-  @media (max-width: 640px) { .poster-link { height: 400px; } }
 
   /* ---- 关于书源 / 使用声明 ---- */
   .source-note {
@@ -308,10 +295,10 @@
       <h1 class="title fade-in d1">墨　屿</h1>
       <p class="tagline fade-in d2">本地优先 · 排版讲究的离线阅读器<br><b>一座只属于你的阅读小岛</b></p>
       <div class="hero-cta fade-in d3">
-        <a class="cta cta-main" id="ctaDownload" href="#download">⬇ 下载应用</a>
-        <a class="cta cta-ghost" href="#license">前 200 名免费领码</a>
+        <a class="cta cta-main" href="#license">前 200 名免费领码</a>
         <a class="cta-mini" href="#features">了解特性 →</a>
       </div>
+      <div class="scroll-hint fade-in d3" aria-hidden="true">↓ 下滑查看下载</div>
     </div>
 
     <!-- 墨屿主题插画：墨色孤岛 + 金阳 + 书页浪 -->
@@ -352,25 +339,6 @@
     </div>
   </section>
 
-  <!-- ============ 版本卡 ============ -->
-  <section id="download">
-    <div class="ver-card fade-in d3">
-      <div class="ver-head">
-        <span class="ver-num" id="version">--<small></small></span>
-        <span class="pill">最新版</span>
-      </div>
-      <div class="changelog" id="changelog"></div>
-      <a class="dl-btn disabled" id="downloadBtn" href="#" aria-disabled="true">⬇ 下载 Android 安装包</a>
-      <div class="status" id="status"></div>
-      <div class="ver-meta" id="meta"></div>
-      <div class="dl-tip" id="dlTip" hidden>
-        下载页提取码　<b id="dlPwd"></b>
-        <button class="dl-copy" id="copyPwd" type="button" aria-label="复制提取码">复制提取码</button>
-        <span class="dl-copy-ok" id="copyPwdOk" hidden>已复制 ✓</span>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ 数据条带 ============ -->
   <section class="stats">
     <div class="stat"><b>0</b><span>广告 · 零内嵌</span></div>
@@ -406,7 +374,7 @@
   <!-- ============ 特性 ============ -->
   <section class="features" id="features">
     <h2 class="section-title">它擅长什么</h2>
-    <p class="section-sub">开源内核 · 无广告 · 不设账号</p>
+    <p class="section-sub">自有内核 · 无广告 · 不设账号</p>
     <div class="grid">
       <div class="f-card">
         <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/><path d="M9 7.5h7M9 11h5"/></svg></div>
@@ -447,15 +415,13 @@
         </div>
         <p class="plan-note">首发限量 <b>前 200 名免费领码</b>，之后 ¥25。一次领码永久有效，需解锁码激活。</p>
         <ul class="plan-list">
-          <li>翻页阅读、目录、书签、进度、自动翻页</li>
-          <li>基础多源搜索、手动选源换源、书源管理 / 导入 / 导出、订阅源</li>
-          <li>字号行距配色、自定义字体、三分区点击</li>
-          <li>听书朗读、漫画、音乐、WiFi 传书</li>
-          <li>明文备份、WebDAV 基础备份、分段选择恢复</li>
-          <li>阅读统计、基础年度报告、主题皮肤与墨晶装饰</li>
-          <li>源治理与修复：自己导入、自己管理</li>
-          <li class="dim">不含本地自动备份与加密 / 多版本快照</li>
-          <li class="dim">不含私密书架与智能书架</li>
+          <li>阅读：翻页/卷页、目录、书签、进度、自动翻页；三分区点击、镜像、中间区；10 套自定义字体与现有排版；长按选择复制</li>
+          <li>书源：基础多源搜索、手动选源与换源、书源管理、订阅更新、目录/正文普通重试</li>
+          <li>书架：书架搜索、手动分组、多选删除/缓存/导出、现有排序筛选</li>
+          <li>听书与多媒体：TTS 基础（嗓音/语速/语调、句高亮、睡眠定时）、漫画、音乐、WiFi 传书</li>
+          <li>数据：明文备份导出、WebDAV 基础备份与进度同步、分段选择恢复、解密与导出、已生成备份的恢复</li>
+          <li>统计：基础年度报告、今日/累计/连续天数、现有分享图；主题皮肤与墨晶装饰</li>
+          <li class="dim">不含：本地自动备份、口令加密备份、WebDAV 多版本快照、私密书架、智能书架、重复书检测、批量校验、自动换源、正文净化</li>
         </ul>
       </div>
       <div class="plan-card pro">
@@ -466,10 +432,14 @@
         </div>
         <p class="plan-note">含普通版全部能力，一次买断、永久免费；绑定用户 ID，换机可迁移。无订阅、无自动续费。</p>
         <ul class="plan-list">
-          <li><b>P1 数据安全</b>：本地自动备份、口令加密备份、WebDAV 多版本快照、完整性校验</li>
-          <li><b>P2 阅读体验</b>：九宫格自定义点击、手势映射、阅读尺、按书字体方案</li>
-          <li><b>P3 深度报告</b>：Top 书与作者、来源分布、目标历史、CSV、完整报告长图</li>
-          <li><b>P4 书库管理</b>：智能书架、重复书检测、批量元数据、私密书架</li>
+          <li><b>P1 数据安全</b>：口令加密备份 · 每日本地自动备份 · WebDAV 多版本快照</li>
+          <li><b>P2 阅读体验</b>：九宫格自定义点击 · 手势映射 · 阅读尺 · 按书字体方案 · 自定义阅读背景图 · 自定义文字颜色</li>
+          <li><b>P3 深度报告</b>：Top 书 · 小说分类 · 音乐 · 目标历史 · 完整长图分享</li>
+          <li><b>P4 书库管理</b>：PIN 私密书架 · 主书架隐藏 · 智能书架 · 重复书检测 · 批量校验与元数据</li>
+          <li><b>自动换源</b>：付费横幅一键找免费源 · 目录失败自愈 · 书源自动修复轮 · 书架刷新失败跨站换源</li>
+          <li><b>搜索加速</b>：全源并发加速（结果范围不变）</li>
+          <li><b>正文增强</b>：基础正文净化（水印/广告行/标点/重复标题）· 正文混合检测 · 拼音智能回填</li>
+          <li><b>音乐预取</b>：预取窗口扩大至 20 首 · 取址失败自动重试（切歌更稳）</li>
           <li>旧备份文件读取 / 恢复不锁；授权失效不删数据、不影响已下载内容</li>
           <li>已有普通码可直接升级 Pro，无需重新领码</li>
         </ul>
@@ -489,12 +459,6 @@
       <p><b>墨晶商店：</b>阅读时长免费铸造墨晶（读 60 分钟约铸 65 墨晶），可兑换头像框、称号、灵宠外观、盲盒等装饰好物；也可自愿充值：¥6=600 / ¥30=3280 / ¥68=7880 / ¥128=15880 墨晶。墨晶与充值均只用于装饰兑换，不涉及任何阅读功能与内容，未成年人请勿充值。</p>
       <p>解锁码通过 <b>QQ 1563475968</b>（与页底「联系作者」一致）领取或购买。</p>
     </div>
-    <div class="poster-shot fade-in">
-      <a class="poster-link" href="poster.png" target="_blank" rel="noopener noreferrer" aria-label="点击查看完整海报">
-        <img src="poster.png" width="1360" height="3160" loading="lazy" alt="墨屿宣传海报：普通版与 Pro 版完整对比">
-        <span class="poster-more">查看完整对比海报 ↗</span>
-      </a>
-    </div>
   </section>
 
   <!-- ============ 上手三步 ============ -->
@@ -505,7 +469,7 @@
       <div class="step">
         <div class="step-no">STEP 01</div>
         <h3>下载并安装</h3>
-        <p>支持 <b>Android 10 及以上</b>（arm64-v8a），更旧系统不在支持范围。点上方「下载」跳转分享页，填写提取码 <code id="stepPwd">—</code>；安装时按系统提示允许「安装未知来源应用」。</p>
+        <p>支持 <b>Android 10 及以上</b>（arm64-v8a），更旧系统不在支持范围。到下方「最新版」卡片点「⬇ 下载 Android 安装包」跳转分享页，填写提取码 <code id="stepPwd">—</code>；安装时按系统提示允许「安装未知来源应用」。</p>
       </div>
       <div class="step">
         <div class="step-no">STEP 02</div>
@@ -520,6 +484,25 @@
     </div>
   </section>
 
+  <!-- ============ 版本卡 ============ -->
+  <section id="download">
+    <div class="ver-card fade-in d3">
+      <div class="ver-head">
+        <span class="ver-num" id="version">--<small></small></span>
+        <span class="pill">最新版</span>
+      </div>
+      <div class="changelog" id="changelog"></div>
+      <a class="dl-btn disabled" id="downloadBtn" href="#" aria-disabled="true">⬇ 下载 Android 安装包</a>
+      <div class="status" id="status"></div>
+      <div class="ver-meta" id="meta"></div>
+      <div class="dl-tip" id="dlTip" hidden>
+        下载页提取码　<b id="dlPwd"></b>
+        <button class="dl-copy" id="copyPwd" type="button" aria-label="复制提取码">复制提取码</button>
+        <span class="dl-copy-ok" id="copyPwdOk" hidden>已复制 ✓</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 关于书源（发布前合规告知） ============ -->
   <section class="features" id="sources">
     <h2 class="section-title">关于书源</h2>
@@ -528,8 +511,8 @@
       <p>墨屿是一款阅读工具，安装包内不含任何书源，也不预置任何内容站点。</p>
       <p>请自行准备你有权使用的书源规则（.json）或订阅地址，然后在 App 内导入：</p>
       <ul>
-        <li>书架 → 空态「导入书源文件」：本地 JSON / ZIP / TXT</li>
-        <li>书源管理 → 「添加书源」：订阅地址或本地文件（订阅地址兼容 Legado / 阅读系 App 通用格式：http(s) 直链，或含 <code>src=</code> 的一键导入地址）</li>
+        <li>书架 → 空态「导入书源文件」：本地 <b>JSON</b>（书源数组 / 单源对象 / 第三方 <code>{"bookSources":[…]}</code> 包装）、<b>ZIP</b>（内含 .json/.txt 条目）、<b>TXT</b>（UTF-8 或 GBK 编码的 JSON 文本）</li>
+        <li>书源管理 → 「添加书源」：订阅地址——<b>http(s) 直链</b>（返回书源 JSON 数组），或<b>一键导入链接</b>（<code>yuedu://…?src=…</code> 深链、<code>…/import?src=…</code> 包装页，自动取内层直链）</li>
         <li>书源管理 → 「更新源」：可选引导，可随时取消</li>
       </ul>
       <p>合法的源可以是你自己编写的规则、公有领域文本站点、已获授权的内容源或自建 RSS。请勿导入侵犯他人著作权或含有违法内容的源。书源由你自行维护，其合法性由你自行判断。</p>
@@ -619,22 +602,22 @@ document.addEventListener('DOMContentLoaded', function () {
      ============================================================ -->
 <script id="release-data" type="application/json">
 {
-  "versionCode": 53,
-  "versionName": "0.5.4",
-  "apkUrl": "https://moyuapp.lanzout.com/iVdOD4g7ag1a",
-  "apkPwd": "8yzy",
-  "sha256": "3843f7fffcde6905a93cb11fab38d672bc755a0f0b8d6ce1833b9270887129f8",
-  "fileSize": 55307731,
-  "changelog": "解锁码授权（首 200 名免费领取，之后 ¥25 一次性买断）、墨晶充值四档、Pro 数据安全（加密备份与本地自动备份）与书库管理（智能书架、重复检测、批量设置、私密书架）、换机迁移独立入口与双机握手、阅读页并发与取消健壮性修复",
+  "versionCode": 54,
+  "versionName": "0.5.5",
+  "apkUrl": "https://moyuapp.lanzout.com/iueAX4gb7hja",
+  "apkPwd": "1chp",
+  "sha256": "682db4b138fbb532d154b8792c34fd46c35c4876d42445f857e7ca6a8e0bd7d2",
+  "fileSize": 62709367,
+  "changelog": "成就徽章扩充与徽章素材瘦身、年度报告 Pro 分区与导出优化、听书播放与桌面歌词优化、墨晶舞台资源精简、创作者签发台完善",
   "minSupportCode": 30,
-  "publishedAt": "2026-11-16"
+  "publishedAt": "2026-11-17"
 }
 </script>
 <!-- 版本块签名（ECDSA P-256 / SHA256withECDSA）：对上面 release-data 块内 trim 后的
      原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见本地发版工具，
      流程见内部发版说明第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
 <script id="release-signature" type="application/json">
-{"sha256WithEcdsa":"MEUCIBdPEnRFpE33FKvAKiDZShPmaK2NabYc74l54Ek+JfxWAiEAnA9I1WurgLCdWmWz/eRxuP0iOtkcyMKjeEZg7PLTtKU="}
+{"sha256WithEcdsa":"MEQCIEkwDqbB2Bz/2fKdOchWF0VEVLLrt8QLdJi0COo7/ZnoAiAbCEp8iINNoiobrJt2JWOc4uIhZDCALKmMcKR0SuCDWg=="}
 </script>
 </body>
 </html>
