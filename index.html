@@ -8,6 +8,10 @@
 <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a201d" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+<!-- 作者本机时钟基准：发布时把该 meta 的 content 改成你电脑当前的精确时间（ISO 带时区）。
+     仅当页面取不到网络时间时作为降级时间源显示，保证所有访客看到的是同一基准。
+     静态页运行时无法实时读取作者电脑时钟，故以发布时刻的快照为基准；每次发新版请顺手刷新。 -->
+<meta name="moyu-author-clock" content="2026-11-20T18:44:50+08:00">
 <link rel="canonical" href="https://xhzkwz.github.io/moyu/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xhzkwz.github.io/moyu/">
@@ -124,6 +128,11 @@
   .dl-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 34px rgba(232,179,75,.38); }
   .dl-btn.disabled { filter: grayscale(.9); pointer-events: none; }
   .ver-meta { margin-top: 10px; text-align: center; font-size: 12px; color: var(--muted); }
+  .net-time {
+    margin-top: 4px; text-align: center;
+    font-size: 11.5px; color: var(--muted); opacity: .85;
+    font-variant-numeric: tabular-nums;
+  }
   .status { margin-top: 8px; text-align: center; font-size: 13px; color: var(--muted); min-height: 18px; }
   .dl-tip {
     margin-top: 10px; text-align: center; font-size: 12.5px; color: var(--muted);
@@ -244,7 +253,7 @@
   .plan-list li.dim { color: var(--muted); }
   .plan-list li.dim::before { content: '·'; color: var(--muted); }
 
-  /* ---- 领码流程 ---- */
+  /* ---- 试读与授权流程 ---- */
   .getcode {
     max-width: 760px; margin: 20px auto 0; padding: 20px 24px;
     background: var(--card); border: 1px solid var(--card-border);
@@ -295,7 +304,7 @@
       <h1 class="title fade-in d1">墨　屿</h1>
       <p class="tagline fade-in d2">本地优先 · 排版讲究的离线阅读器<br><b>一座只属于你的阅读小岛</b></p>
       <div class="hero-cta fade-in d3">
-        <a class="cta cta-main" href="#license">前 200 名免费领码</a>
+        <a class="cta cta-main" href="#license">免费试读 7 天</a>
         <a class="cta-mini" href="#features">了解特性 →</a>
       </div>
       <div class="scroll-hint fade-in d3" aria-hidden="true">↓ 下滑查看下载</div>
@@ -406,14 +415,14 @@
   <!-- ============ 解锁码与版本 ============ -->
   <section class="features" id="license">
     <h2 class="section-title">解锁码与版本</h2>
-    <p class="section-sub">一次买断 · 永久免费 · 数据归你</p>
+    <p class="section-sub">先试读七天 · 合意再买断 · 数据归你</p>
     <div class="plan-grid fade-in">
       <div class="plan-card">
         <div class="plan-head">
-          <span class="plan-name">普通版</span>
+          <span class="plan-name">基础款</span>
           <span class="plan-price">¥25<small> 一次买断</small></span>
         </div>
-        <p class="plan-note">首发限量 <b>前 200 名免费领码</b>，之后 ¥25。一次领码永久有效，需解锁码激活。</p>
+        <p class="plan-note">含七天免费试读。期满若想继续，基础款 ¥25 一次买断、长期有效。</p>
         <ul class="plan-list">
           <li>阅读：翻页/卷页、目录、书签、进度、自动翻页；三分区点击、镜像、中间区；10 套自定义字体与现有排版；长按选择复制</li>
           <li>书源：基础多源搜索、手动选源与换源、书源管理、订阅更新、目录/正文普通重试</li>
@@ -430,7 +439,7 @@
           <span class="plan-tag">推荐</span>
           <span class="plan-price">¥48<small> 首发 / 常规 ¥68</small></span>
         </div>
-        <p class="plan-note">含普通版全部能力，一次买断、永久免费；绑定用户 ID，换机可迁移。无订阅、无自动续费。</p>
+        <p class="plan-note">含基础款全部能力，一次买断、永久免费；绑定用户 ID，换机可迁移。无订阅、无自动续费。</p>
         <ul class="plan-list">
           <li><b>P1 数据安全</b>：口令加密备份 · 每日本地自动备份 · WebDAV 多版本快照</li>
           <li><b>P2 阅读体验</b>：九宫格自定义点击 · 手势映射 · 阅读尺 · 按书字体方案 · 自定义阅读背景图 · 自定义文字颜色</li>
@@ -441,23 +450,23 @@
           <li><b>正文增强</b>：基础正文净化（水印/广告行/标点/重复标题）· 正文混合检测 · 拼音智能回填</li>
           <li><b>音乐预取</b>：预取窗口扩大至 20 首 · 取址失败自动重试（切歌更稳）</li>
           <li>旧备份文件读取 / 恢复不锁；授权失效不删数据、不影响已下载内容</li>
-          <li>已有普通码可直接升级 Pro，无需重新领码</li>
+          <li>已有基础款码可直接升级 Pro，无需重新购买</li>
         </ul>
       </div>
     </div>
     <div class="getcode fade-in">
-      <h3>授权码怎么获取</h3>
+      <h3>试读与授权</h3>
       <ol>
-        <li>安装后打开 App，首屏就是「<b>激活墨屿</b>」页（未激活时不会进入书架）。</li>
-        <li>找到「<b>本机用户 ID</b>」一行，点右侧「<b>复制</b>」，把这串 <code>MY-XXXX-XXXX-XXXX</code> 发给作者 <b>QQ 1563475968</b>。</li>
-        <li>作者按你的 ID 签发授权码并回传：<b>前 200 名免费领取</b>，之后普通版 ¥25 / Pro ¥48（首发）。码与 ID 一一对应，换机可迁移。</li>
-        <li>把码整段粘回同一页的输入框，点「<b>激活</b>」即可进入 App。</li>
+        <li>安装后即可<b>免费试读 7 天</b>，功能完整、无需激活码。</li>
+        <li>试读期内可正常使用；期满若想继续，复制「<b>本机用户 ID</b>」（形如 <code>MY-XXXX-XXXX-XXXX</code>）发给作者 <b>QQ 1563475968</b>。</li>
+        <li>作者按 ID 签发授权码回传：<b>基础款 ¥25 / Pro ¥48（首发，常规 ¥68）</b>，一次买断、长期有效。码与 ID 绑定，换机可迁移。</li>
+        <li>收到后整段粘回 App 输入框，点「<b>激活</b>」即可；试读期内也可提前激活。</li>
       </ol>
-      <p class="tip">已激活后想升级 Pro，到「我的 → 兑换码激活」粘贴 Pro 码即可，等级只升不降，无需重新领普通码。</p>
+      <p class="tip">试读结束不清除任何数据。升级 Pro 到「我的 → 兑换码激活」粘贴 Pro 码即可，等级只升不降。</p>
     </div>
     <div class="source-note" style="margin-top: 22px;">
       <p><b>墨晶商店：</b>阅读时长免费铸造墨晶（读 60 分钟约铸 65 墨晶），可兑换头像框、称号、灵宠外观、盲盒等装饰好物；也可自愿充值：¥6=600 / ¥30=3280 / ¥68=7880 / ¥128=15880 墨晶。墨晶与充值均只用于装饰兑换，不涉及任何阅读功能与内容，未成年人请勿充值。</p>
-      <p>解锁码通过 <b>QQ 1563475968</b>（与页底「联系作者」一致）领取或购买。</p>
+      <p>授权码经 <b>QQ 1563475968</b>（与页底「联系作者」一致）获取。</p>
     </div>
   </section>
 
@@ -473,8 +482,8 @@
       </div>
       <div class="step">
         <div class="step-no">STEP 02</div>
-        <h3>复制用户 ID 领码激活</h3>
-        <p>打开 App 首屏即「<b>激活墨屿</b>」页，复制「本机用户 ID」发给作者 QQ <b>1563475968</b> 换取授权码，粘回同页点「激活」。详细步骤见<a href="#license">授权码怎么获取</a>。</p>
+        <h3>先试读七天</h3>
+        <p>打开 App 即可<b>免费试读 7 天</b>，功能完整、无需激活码；期满若想继续，复制「本机用户 ID」发给作者 QQ <b>1563475968</b> 换取基础款或 Pro 授权码，粘回页面点「激活」。详见<a href="#license">试读与授权</a>。</p>
       </div>
       <div class="step">
         <div class="step-no">STEP 03</div>
@@ -495,6 +504,7 @@
       <a class="dl-btn disabled" id="downloadBtn" href="#" aria-disabled="true">⬇ 下载 Android 安装包</a>
       <div class="status" id="status"></div>
       <div class="ver-meta" id="meta"></div>
+      <div class="net-time" id="netTime">当前网络时间：--</div>
       <div class="dl-tip" id="dlTip" hidden>
         下载页提取码　<b id="dlPwd"></b>
         <button class="dl-copy" id="copyPwd" type="button" aria-label="复制提取码">复制提取码</button>
@@ -590,6 +600,45 @@ document.addEventListener('DOMContentLoaded', function () {
     el('status').textContent = '发布者尚未配置下载地址';
   }
 });
+
+// ---- 当前时间：优先取网络时间（本站响应头 Date，服务器/CDN 已校时），取不到再降级作者本机时间 ----
+// 网络时间不读访客本机时钟，避免用户改时间后显示失实；降级时读 <meta name="moyu-author-clock">
+// （发布时刻作者电脑时间的快照，静态页无法实时读作者时钟），保证所有访客看到同一基准。
+document.addEventListener('DOMContentLoaded', function () {
+  var node = document.getElementById('netTime');
+  if (!node) return;
+  var offset = 0, label = '当前网络时间', ok = true;
+  var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+  var fmt = function (d) {
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+      ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+  };
+  var tick = function () {
+    node.textContent = label + '：' + fmt(new Date(Date.now() + offset));
+  };
+  var controller = new AbortController();
+  var timer = setTimeout(function () { controller.abort(); }, 5000);
+  fetch(location.href, { method: 'HEAD', cache: 'no-store', signal: controller.signal })
+    .then(function (r) {
+      var t = Date.parse(r.headers.get('Date') || '');
+      if (isNaN(t)) throw new Error('missing Date header');
+      offset = t - Date.now();
+    })
+    .catch(function () {
+      // 网络时间取不到（file:// 离线打开、请求超时/被拦）→ 降级作者本机时间快照。
+      // 快照也没有时：不显示访客自己的本机时钟（避免把访客时间当网络时间误导），明确标注不可用。
+      var meta = document.querySelector('meta[name="moyu-author-clock"]');
+      var t = meta ? Date.parse(meta.getAttribute('content') || '') : NaN;
+      if (isNaN(t)) { ok = false; node.textContent = '时间不可用'; return; }
+      offset = t - Date.now(); label = '作者本机时间';
+    })
+    .then(function () {
+      clearTimeout(timer);
+      if (!ok) return;
+      tick();
+      setInterval(tick, 1000);
+    });
+});
 </script>
 <!-- ============================================================
      ★ 发新版只改下面这两个块 ★（App 检查更新也读它们，主页版本卡也渲染版本块）
@@ -599,25 +648,27 @@ document.addEventListener('DOMContentLoaded', function () {
           changelog=更新说明；sha256/fileSize 为必填校验值（缺 sha256 App 会拒装）。
      签名：release-data 块改完后必须重算签名并同步更新 release-signature 块，
           否则 App 端验签失败会当作「没有更新」拒收（流程见内部发版说明 ③）。
+     时间：顺手把 <head> 里 moyu-author-clock meta 的 content 改成发布时刻的本机精确时间
+          （ISO 带时区，如 2026-11-19T10:40:42+08:00）。仅当页面取不到网络时间时作降级基准。
      ============================================================ -->
 <script id="release-data" type="application/json">
 {
-  "versionCode": 55,
-  "versionName": "0.5.6",
-  "apkUrl": "https://moyuapp.lanzout.com/iUiIU4gg1ekh",
-  "apkPwd": "a2g2",
-  "sha256": "0b68231c18826f67bae09aa0a51614dd0702d354d6b1fc56d7439d9ce0840be9",
-  "fileSize": 62809867,
-  "changelog": "书架空态根治——源装载竞态 + 域迁移脱钩",
+  "versionCode": 56,
+  "versionName": "0.5.7",
+  "apkUrl": "https://moyuapp.lanzout.com/iSQnU4gpnf7g",
+  "apkPwd": "8j8x",
+  "sha256": "ee8678fe658d1c9a5e50643e9d1c9aba4844d19b5c88ba6dd7403e65ddb04f41",
+  "fileSize": 65122142,
+  "changelog": null,
   "minSupportCode": 30,
-  "publishedAt": "2026-11-18"
+  "publishedAt": "2026-11-20"
 }
 </script>
 <!-- 版本块签名（ECDSA P-256 / SHA256withECDSA）：对上面 release-data 块内 trim 后的
      原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见本地发版工具，
      流程见内部发版说明第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
 <script id="release-signature" type="application/json">
-{"sha256WithEcdsa":"MEUCIQDW3QyGKU5F9Msj08KJRYgR0uBY5D9eXBkxSenjH2ykmQIgSF6Jfr2JbyRiqZI409tKm4AVTdtVNROLK+uefYiUy48="}
+{"sha256WithEcdsa":"MEUCIEZ+ONObPHusfJFwaRaN7oAbIi2ZKTPQMW5Tg2iHSKwXAiEAzPO+nhAO4tbHzO4Cd51ZqZmiynscYz7s6pg8/g3YgsY="}
 </script>
 </body>
 </html>
