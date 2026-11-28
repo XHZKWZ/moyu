@@ -11,7 +11,7 @@
 <!-- 作者本机时钟基准：发布时把该 meta 的 content 改成你电脑当前的精确时间（ISO 带时区）。
      仅当页面取不到网络时间时作为降级时间源显示，保证所有访客看到的是同一基准。
      静态页运行时无法实时读取作者电脑时钟，故以发布时刻的快照为基准；每次发新版请顺手刷新。 -->
-<meta name="moyu-author-clock" content="2026-11-25T18:38:42+08:00">
+<meta name="moyu-author-clock" content="2026-11-28T17:26:30+08:00">
 <link rel="canonical" href="https://xhzkwz.github.io/moyu/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xhzkwz.github.io/moyu/">
@@ -445,6 +445,9 @@
           <li><b>P2 阅读体验</b>：九宫格自定义点击 · 手势映射 · 阅读尺 · 按书字体方案 · 自定义阅读背景图 · 自定义文字颜色</li>
           <li><b>P3 深度报告</b>：Top 书 · 小说分类 · 音乐 · 目标历史 · 完整长图分享</li>
           <li><b>P4 书库管理</b>：PIN 私密书架 · 主书架隐藏 · 智能书架 · 重复书检测 · 批量校验与元数据</li>
+          <li><b>全库检索</b>：已缓存正文跨书检索 · 作者/来源/仅书签聚合筛选</li>
+          <li><b>听书增强</b>：按书保存嗓音/语速 · 定时记忆（朗读队列与跨章预取暂未开放）</li>
+          <li><b>私密增强</b>：空闲自动锁定 · 伪装封面/标题 · 生物识别解锁（PIN 兜底）</li>
           <li><b>自动换源</b>：付费横幅一键找免费源 · 目录失败自愈 · 书源自动修复轮 · 书架刷新失败跨站换源</li>
           <li><b>搜索加速</b>：全源并发加速（结果范围不变）</li>
           <li><b>正文增强</b>：基础正文净化（水印/广告行/标点/重复标题）· 正文混合检测 · 拼音智能回填</li>
@@ -653,22 +656,22 @@ document.addEventListener('DOMContentLoaded', function () {
      ============================================================ -->
 <script id="release-data" type="application/json">
 {
-  "versionCode": 58,
-  "versionName": "0.5.8",
-  "apkUrl": "https://moyuapp.lanzout.com/iudOQ4h9yszi",
-  "apkPwd": "arf3",
-  "sha256": "e69bb8b22f7d6756353dbd5045b33d7cb2efca6e3b13009a6213f1c3e35003a0",
-  "fileSize": 66646293,
+  "versionCode": 59,
+  "versionName": "0.5.9",
+  "apkUrl": "https://moyuapp.lanzout.com/ikXJj4hm7g1i",
+  "apkPwd": "kq35",
+  "sha256": "9dc173088368212e1f2a198a1fb4c0d324bab773811cddec7f7323c13fce4330",
+  "fileSize": 67777971,
   "changelog": null,
   "minSupportCode": 30,
-  "publishedAt": "2026-11-25"
+  "publishedAt": "2026-11-28"
 }
 </script>
 <!-- 版本块签名（ECDSA P-256 / SHA256withECDSA）：对上面 release-data 块内 trim 后的
      原样字节签名，base64 塞进 {"sha256WithEcdsa":"…"}。签名工具见本地发版工具，
      流程见内部发版说明第③步「签名」。签名缺失或验签不过，App 会当作「没有更新」拒收整块。 -->
 <script id="release-signature" type="application/json">
-{"sha256WithEcdsa":"MEUCIEZw6ULeUvb2inqScZoLmsoJZz5Da5faOOza5snNQ1KyAiEA2pBp5RhNBTO5DbrrcodiTADReb4kw06t/utsi0Qzlmw="}
+{"sha256WithEcdsa":"MEUCIQDDpCAP5O84EOTla9a1FARyemBReDGvwLzH9xmvs2+GPgIgaHq1zrzhi+GVf6W8CQQwbVT2vc66pxpQef6q0lt3cB8="}
 </script>
 </body>
 </html>
